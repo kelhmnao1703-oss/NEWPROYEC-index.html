@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizard Academy</title>
-
-    <!-- 🔗 CONEXIÓN AL CSS (sube una carpeta y entra a CSS) -->
-    <link rel="stylesheet" href="../CSS/styles.css">
+<meta charset="UTF-8">
+<title>Inicio</title>
+<link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
 
-    <!-- 🔵 ENCABEZADO -->
-    <header class="header">
-        <h1>Lizard Academy - Tecnologico Nacional de Tlalnepantla</h1>
-        <div class="icono">⌄</div>
-    </header>
+<header class="header">
+    <h1>Lizard Academy - Tecnológico de Tlalnepantla</h1>
 
-    <!-- 🟢 CONTENIDO PRINCIPAL -->
-    <main class="contenedor">
+    <nav class="menu">
+        <a href="Inicio.html">Inicio</a>
+        <a href="panel.html">Panel</a>
+        <a href="alumnos.html">Alumnos</a>
+        <a href="docentes.html">Docentes</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+
+    <div class="card">
 
         <!-- 🐊 IMAGEN -->
         <div class="imagen">
-            <!-- 
-            📌 AQUÍ VA TU IMAGEN
-            Ruta: sube una carpeta (..) y entra a IMG
-            -->
+            <!-- 📌 AQUÍ VA TU IMAGEN -->
             <img src="../IMG/cocodrilo.jpeg" alt="Lizard Academy">
         </div>
 
-        <!-- 📄 TEXTO -->
-        <div class="texto">
-            <h2>Bienvenido a Lizard Academy</h2>
+        <!-- 🧠 CONTENIDO ORIGINAL -->
+        <h2>Bienvenido a Lizard Academy</h2>
 
-            <p>
-                Lizard Academy es una plataforma educativa desarrollada con el propósito de complementar 
-                y enriquecer la formación académica de los estudiantes del Instituto Tecnológico de 
-                Tlalnepantla (ITTLA).
-            </p>
+        <p>
+            Lizard Academy es una plataforma educativa desarrollada con el propósito de complementar 
+            y enriquecer la formación académica de los estudiantes del Instituto Tecnológico de 
+            Tlalnepantla (ITTLA).
+        </p>
 
-            <p>
-                Nuestro objetivo es brindar herramientas digitales que faciliten el aprendizaje autónomo,
-                colaborativo y continuo en cualquier momento y lugar.
-            </p>
+        <p>
+            Nuestro objetivo es brindar herramientas digitales que faciliten el aprendizaje autónomo, 
+            colaborativo y continuo en cualquier momento y lugar.
+        </p>
 
-            <h3>📘 ¿Qué encontrarás aquí?</h3>
-            <ul>
-                <li>Cursos interactivos por área de conocimiento.</li>
-                <li>Videos explicativos paso a paso.</li>
-                <li>Libros digitales y recursos recomendados.</li>
-                <li>Guías de estudio personalizadas.</li>
-                <li>Acceso docente para evaluaciones.</li>
-            </ul>
+        <h3>📘 ¿Qué encontrarás aquí?</h3>
+        <ul>
+            <li>Cursos interactivos por área de conocimiento.</li>
+            <li>Videos explicativos paso a paso.</li>
+            <li>Libros digitales y recursos recomendados.</li>
+            <li>Guías de estudio personalizadas.</li>
+            <li>Acceso docente para evaluaciones.</li>
+        </ul>
 
-            <h3>💡 ¿Quiénes pueden usar Lizard Academy?</h3>
-            <p>
-                <strong>Alumnos:</strong> Acceso a contenidos.<br>
-                <strong>Docentes:</strong> Gestión educativa.<br>
-                <strong>Administradores:</strong> Control del sistema.
-            </p>
-        </div>
+        <h3>💡 ¿Quiénes pueden usar Lizard Academy?</h3>
+        <p>
+            <strong>Alumnos:</strong> Acceso a contenidos alineados a su carrera.<br>
+            <strong>Docentes:</strong> Gestión de materiales educativos.<br>
+            <strong>Administradores:</strong> Control del sistema.
+        </p>
 
-    </main>
+        <!-- 🔘 BOTÓN LOGIN -->
+        <button onclick="abrirLogin()">Iniciar Sesión</button>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Lizard Academy | Tecnológico de Tlalnepantla</p>
+</footer>
+
+<!-- 🌑 FONDO -->
+<div id="overlay" class="overlay"></div>
+
+<!-- 🔐 MODAL LOGIN -->
+<div id="modalLogin" class="modal">
+    <h2>Iniciar Sesión</h2>
+
+    <input type="text" placeholder="Usuario">
+    <input type="password" placeholder="Contraseña">
+
+    <button onclick="window.location.href='panel.html'">Entrar</button>
+</div>
+
+<script>
+function abrirLogin(){
+    document.getElementById("modalLogin").style.display="block";
+    document.getElementById("overlay").style.display="block";
+}
+</script>
 
 </body>
 </html>
