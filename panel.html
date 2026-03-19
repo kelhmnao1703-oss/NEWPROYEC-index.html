@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Panel</title>
-<link rel="stylesheet" href="../CSS/styles.css">
+    <meta charset="UTF-8">
+    <title>Panel</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
+
 <body>
 
 <header class="header">
-    <h1>Panel Administrador</h1>
+    <h1>Panel de Control</h1>
 
     <nav class="menu">
-        <a href="Inicio.html">Inicio</a>
-        <a href="panel.html">Panel</a>
+        <a href="index.html">Inicio</a>
         <a href="alumnos.html">Alumnos</a>
         <a href="docentes.html">Docentes</a>
     </nav>
 </header>
 
-<div class="contenedor">
+<main class="contenedor">
     <div class="card">
-        <h2>Bienvenido 👩‍💻</h2>
-        <p>Gestiona alumnos y docentes desde aquí.</p>
+
+        <h2>Opciones del sistema</h2>
+
+        <p>Selecciona una sección:</p>
+
+        <button onclick="window.location.href='alumnos.html'">Alumnos</button>
+        <button onclick="window.location.href='docentes.html'">Docentes</button>
+
     </div>
-</div>
+</main>
 
 <footer class="footer">
     <p>© 2026 Lizard Academy</p>
